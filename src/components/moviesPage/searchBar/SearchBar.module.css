@@ -1,0 +1,19 @@
+.searchForm {
+    display: flex;
+    align-items: center;
+}
+
+.searchForm_input {
+    padding: 10px;
+    border-radius: 6px;
+    width: 400px;
+    border: solid 1px black;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.searchForm_input:hover, .searchForm_input:focus {
+    border: solid 1px #2196f3;
+}

@@ -1,0 +1,18 @@
+.hPageList {
+    list-style-type: disc;
+    margin-top: 20px;
+}
+
+.hPageList_item:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.hPageList_link {
+    color: rgb(9, 9, 122);
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.hPageList_link:hover, .hPageList_link:focus {
+    color: #2196f3;
+}

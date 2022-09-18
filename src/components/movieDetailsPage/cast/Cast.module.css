@@ -1,0 +1,18 @@
+.item_cast__image_cast {
+    width: 200px;
+    height: 280px;
+}
+
+.item_cast__original_name {
+    display: flex;
+    align-items: center;
+}
+
+.item_cast__original_name::before {
+    width: 5px;
+    height: 5px;
+    background: black;
+    border-radius: 50px;
+    content: '';
+    margin-right: 12px;
+}

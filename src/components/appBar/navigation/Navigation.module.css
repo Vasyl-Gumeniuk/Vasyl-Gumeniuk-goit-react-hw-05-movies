@@ -1,0 +1,35 @@
+.navList {
+    display: flex;
+    align-items: center;
+}
+
+.navItem:not(:last-child) {
+    margin-right: 30px;
+}
+
+.navLink:hover, .navLink:focus {
+    color: #2196f3;
+}
+
+.navLink {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    font-weight: 500;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.navLink.active {
+    color: rgb(9, 9, 122);
+}
+
+.navLink_active {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 24px; 
+    color: #2196f3;
+}
