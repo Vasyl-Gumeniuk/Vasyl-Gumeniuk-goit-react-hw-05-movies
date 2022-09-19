@@ -13,7 +13,9 @@ export default function MoviesPage() {
     };
     return (
         <>
-            <SearchBar onSubmit={hundleFormSubmit} />
+            <SearchBar
+                onSubmit={hundleFormSubmit}
+            />
             {searchString && <Movies movieName={searchString} />}
         </>
     );

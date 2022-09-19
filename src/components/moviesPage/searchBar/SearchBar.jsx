@@ -1,11 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
+import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Button from '../../button/Button.jsx';
 import styles from './SearchBar.module.css';
 
+
 export default function SearchBar({ onSubmit }) {
+    const location = useLocation();
+    const searchQuery = new URLSearchParams(location.search).get('query');
+
     const [nameImage, setNameImage] = useState('');
+      
+    useEffect(() => {
+        if (searchQuery) {
+            setNameImage(searchQuery);
+        }
+    }, [searchQuery])
 
     const handleNameChange = e => {
         setNameImage(e.currentTarget.value.toLowerCase());
@@ -18,9 +29,8 @@ export default function SearchBar({ onSubmit }) {
             return;
         }
         onSubmit(nameImage);
-
-        setNameImage('');
     };
+    
 
     return (
         <form onSubmit={handleSubmit} className={styles.searchForm}>
